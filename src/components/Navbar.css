@@ -1,0 +1,105 @@
+/* =========================
+   NAVBAR THEME
+========================= */
+.custom-navbar {
+  background: linear-gradient(135deg, #6B4A3A, #7A5642);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  height: 72px;                 /*  fixed navbar height */
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand {
+  color: #FFF6EF !important;
+  font-size: 1.15rem;
+  letter-spacing: 0.3px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 8px; 
+}
+
+.navbar-logo {
+ max-height: 70px;           /* visual sweet spot */
+  width: auto;
+  object-fit: contain;
+  display: block;
+
+  /* 👇 THIS fixes the cramped feeling */
+  padding-top: 2px;
+  padding-bottom: 2px;
+  
+}
+
+
+/* =========================
+   NAV LINKS
+========================= */
+.nav-link {
+  color: #E7D4C4 !important;
+  font-weight: 500;
+  position: relative;
+  padding: 0.5rem 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  width: 0%;
+  height: 2px;
+  background-color: #D6A77A;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover {
+  color: #FFF6EF !important;
+}
+
+.nav-link:hover::after {
+  width: 60%;
+}
+
+/* ACTIVE ROUTE */
+.nav-link.active {
+  color: #FFF6EF !important;
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  width: 70%;
+}
+
+/* =========================
+   CTA BUTTON
+========================= */
+.nav-cta {
+  background-color: #D6A77A;
+  color: #ffffff !important;
+  font-weight: 600;
+  padding: 0.45rem 1.2rem;
+  border-radius: 999px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.nav-cta:hover {
+  background-color: #C89666;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  color: #2E1E15;
+}
+
+/* =========================
+   MOBILE
+========================= */
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
